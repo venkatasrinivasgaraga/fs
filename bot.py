@@ -9,9 +9,8 @@ import sys
 from datetime import datetime
 from config import LOGGER, PORT, OWNER_ID
 from helper import MongoDB
-name ="""
- BY Voat FROM TG
-"""
+
+version = "v1.0.0"
 
 
 class Bot(Client):
