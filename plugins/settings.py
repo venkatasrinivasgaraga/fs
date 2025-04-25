@@ -72,12 +72,25 @@ async def photos(client, query):
 __Use the appropriate button below to add or remove any admin based on your needs!__
 """
     reply_markup = InlineKeyboardMarkup([
-        [InlineKeyboardButton(f'{'ꜱᴇᴛ' if client.messages.get("START_PHOTO", "") else 'ᴄʜᴀɴɢᴇ'}\nꜱᴛᴀʀᴛ ᴘʜᴏᴛᴏ', 'add_start_photo'), InlineKeyboardButton(f'{'ꜱᴇᴛ' if client.messages.get("FSUB_PHOTO", "") else 'ᴄʜᴀɴɢᴇ'}\nꜰꜱᴜʙ ᴘʜᴏᴛᴏ', 'add_fsub_photo')],
-        [InlineKeyboardButton('ʀᴇᴍᴏᴠᴇ\nꜱᴛᴀʀᴛ ᴘʜᴏᴛᴏ', 'rm_start_photo'), InlineKeyboardButton('ʀᴇᴍᴏᴠᴇ\nꜰꜱᴜʙ ᴘʜᴏᴛᴏ', 'rm_fsub_photo')],
-        [InlineKeyboardButton('◂ ʙᴀᴄᴋ', 'settings')]]
-    )
-    await query.message.edit_text(msg, reply_markup=reply_markup)
-    return
+    [
+        InlineKeyboardButton(
+            ('ꜱᴇᴛ' if client.messages.get("START_PHOTO", "") == "" else 'ᴄʜᴀɴɢᴇ') + '\nꜱᴛᴀʀᴛ ᴘʜᴏᴛᴏ', 
+            callback_data='add_start_photo'
+        ),
+        InlineKeyboardButton(
+            ('ꜱᴇᴛ' if client.messages.get("FSUB_PHOTO", "") == "" else 'ᴄʜᴀɴɢᴇ') + '\nꜰꜱᴜʙ ᴘʜᴏᴛᴏ', 
+            callback_data='add_fsub_photo'
+        )
+    ],
+    [
+        InlineKeyboardButton('ʀᴇᴍᴏᴠᴇ\nꜱᴛᴀʀᴛ ᴘʜᴏᴛᴏ', callback_data='rm_start_photo'),
+        InlineKeyboardButton('ʀᴇᴍᴏᴠᴇ\nꜰꜱᴜʙ ᴘʜᴏᴛᴏ', callback_data='rm_fsub_photo')
+    ],
+    [InlineKeyboardButton('◂ ʙᴀᴄᴋ', callback_data='settings')]
+])
+
+await query.message.edit_text(msg, reply_markup=reply_markup)
+return
 
 @Client.on_callback_query(filters.regex("^protect$"))
 async def protect(client, query):
