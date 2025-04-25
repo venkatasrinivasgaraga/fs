@@ -1,0 +1,25 @@
+[
+    {
+        "session": "ses",
+        "token": "764xxxx91:AAFEm1xxxxxxz5txhxgmk",
+        "api_id": "26xxxx00",
+        "api_hash": "9ea494xxxxxxxxxxx4bbd",
+        "workers": 8,
+        "db_uri": "mongodb+srv://Clustexxxxxxxxxxx.net/?retryWrites=true&w=majority&appName=Cluster0",
+        "db_name": "name",
+        "fsubs": [[-1002074478106, true, 5]],
+        "db": -1002074478106,
+        "auto_del": 0,
+        "messages": {
+            "START": "<blockquote expandable>__Lorem ipsum dolor sit amet,\nconsectetur adipiscing elit sed.\nVivamus luctus urna sed urna.\nCurabitur blandit tempus porttitor.\nNullam quis risus eget urna.__</blockquote>",
+            "FSUB": "",
+            "ABOUT": "ABOUT MSG",
+            "REPLY": "reply_text",
+            "START_PHOTO": "",
+            "FSUB_PHOTO": ""
+        },
+        "admins": [78324663, 73468932],
+        "disable_btn": true,
+        "protect": false
+    }
+]
