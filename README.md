@@ -138,7 +138,7 @@ A list of configurations — one for each bot you want to run.
 1. **Clone the repo**:
 
 ```bash
-git clone https://github.com/your-username/FileStoreBot
+git clone https://github.com/ArihantSharma/FileStoreBot
 cd FileStoreBot
 bash start.sh
 ```
