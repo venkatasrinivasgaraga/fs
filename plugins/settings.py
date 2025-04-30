@@ -87,10 +87,10 @@ __Use the appropriate button below to add or remove any admin based on your need
         InlineKeyboardButton('ʀᴇᴍᴏᴠᴇ\nꜰꜱᴜʙ ᴘʜᴏᴛᴏ', callback_data='rm_fsub_photo')
     ],
     [InlineKeyboardButton('◂ ʙᴀᴄᴋ', callback_data='settings')]
-])
 
-await query.message.edit_text(msg, reply_markup=reply_markup)
-return
+    ])
+    await query.message.edit_text(msg, reply_markup=reply_markup)
+    return
 
 @Client.on_callback_query(filters.regex("^protect$"))
 async def protect(client, query):
