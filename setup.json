@@ -5,7 +5,7 @@
         "api_id": "22922577",
         "api_hash": "ff5513f0b7e10b92a940bd107e1ac32a",
         "workers": 8,
-        "db_uri": "mongodb+srv://autorename:autorename@cluster0.lnz3gyj.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0",
+        "db_uri": "",
         "db_name": "Luffy",
         "fsubs": [[-1002358532189, true, 5]],
         "db": -1002358588449,
